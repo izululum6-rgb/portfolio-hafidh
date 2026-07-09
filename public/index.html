@@ -72,23 +72,26 @@
             <h2 class="text-3xl font-bold text-center mb-4">Mari Bekerja Sama</h2>
             <p class="text-center text-slate-400 mb-12">Punya proyek yang ingin didiskusikan? Kirimkan pesan langsung kepada saya.</p>
             
-            <form id="contactForm" class="space-y-6">
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div>
-                        <label class="block text-sm font-medium text-slate-300 mb-2">Nama Lengkap</label>
-                        <input type="text" id="name" required class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium text-slate-300 mb-2">Alamat Email</label>
-                        <input type="email" id="email" required class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500">
-                    </div>
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-slate-300 mb-2">Pesan Anda</label>
-                    <textarea id="message" rows="5" required class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500"></textarea>
-                </div>
-                <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-bold hover:bg-blue-700 transition shadow-lg">Kirim Pesan</button>
-            </form>
+<form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+  <input type="hidden" name="access_key" value="09be6985-e117-48f8-b328-3e4492661fae">
+  
+  <div>
+    <label class="block text-sm font-medium text-slate-300">Nama Lengkap</label>
+    <input type="text" name="name" required class="w-full bg-slate-800 text-white p-3 rounded-lg mt-1" placeholder="Nama Anda">
+  </div>
+
+  <div>
+    <label class="block text-sm font-medium text-slate-300">Alamat Email</label>
+    <input type="email" name="email" required class="w-full bg-slate-800 text-white p-3 rounded-lg mt-1" placeholder="email@kamu.com">
+  </div>
+
+  <div>
+    <label class="block text-sm font-medium text-slate-300">Pesan Anda</label>
+    <textarea name="message" rows="5" required class="w-full bg-slate-800 text-white p-3 rounded-lg mt-1" placeholder="Tulis pesan di sini..."></textarea>
+  </div>
+
+  <button type="submit" class="w-full bg-blue-600 text-white p-3 rounded-lg font-semibold hover:bg-blue-700 transition">Kirim Pesan</button>
+</form>
             <div id="formResponse" class="mt-4 text-center hidden font-semibold"></div>
         </div>
     </section>
